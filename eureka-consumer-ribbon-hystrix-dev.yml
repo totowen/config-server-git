@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: eureka-consumer-ribbon-hystrix
+
+server:
+  port: 0 # 指定该Eureka-client实例的端口 2101 2102
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1001/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
+
+#logging:
+#  file: ${spring.application.name}.log
+
+
+
