@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: eureka-client
+
+server:
+  port: 0  # 指定该Eureka-client实例的端口
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1001/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${random.int}
+
+
+
+# 参考文档：http://projects.spring.io/spring-cloud/docs/1.0.3/spring-cloud.html#_standalone_mode
+# 参考文档：http://my.oschina.net/buwei/blog/618756
